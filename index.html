@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Life - Centre de Formation Numérique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- En-tête et Menu de navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">New Life</div>
+            <nav class="nav-menu">
+                <a href="#">Accueil</a>
+                <a href="#a-propos">À propos</a>
+                <a href="#formations">Formations</a>
+                <a href="#activites">Activités</a>
+                <a href="#inscription">Inscription</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section Héro (Accueil principal) -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Bienvenue chez New Life</h1>
+            <p>L'informatique au service de votre réussite. Formez-vous aux métiers du numérique et suivez nos activités en direct avec des experts.</p>
+            <a href="#formations" id="btn-decouvrir" class="cta-button">Découvrir nos formations</a>
+        </div>
+    </section>
+
+    <!-- Section À propos / Présentation officielle -->
+    <section id="a-propos" class="about-section">
+        <div class="container">
+            <h2>À propos de New Life</h2>
+            <div class="about-content">
+                <p class="quote">"L'informatique au service de votre réussite."</p>
+                <p>Bienvenue chez <strong>New Life</strong>, votre centre d'excellence dédié à l'apprentissage et à la maîtrise des technologies numériques. Dans un monde en constante évolution, le numérique est la clé de l'autonomie et de la performance professionnelle.</p>
+                <p>De l'initiation de base jusqu'aux outils professionnels avancés (Bureautique, Développement Web, Intelligence Artificielle), nous formons la nouvelle génération prête à relever les défis de demain.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Formations -->
+    <section id="formations" class="formations-section">
+        <div class="container">
+            <h2>Nos Formations Phares</h2>
+            <div class="formations-grid">
+                <div class="card">
+                    <h3>Bureautique</h3>
+                    <p>Maîtrisez l'initiation à l'informatique, Word, Publisher, Excel, PowerPoint, Maintenance des ordinateurs et Access pour booster votre productivité.</p>
+                </div>
+                <div class="card">
+                    <h3>Développement Web</h3>
+                    <p>Apprenez à concevoir et coder des sites web modernes et professionnels de A à Z.</p>
+                </div>
+                <div class="card">
+                    <h3>Intelligence Artificielle</h3>
+                    <p>Découvrez comment exploiter l'IA pour automatiser vos tâches et maximiser vos performances.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Activités d'Apprentissage & Actualités -->
+    <section id="activites" class="activities-section">
+        <div class="container">
+            <h2>Activités d'Apprentissage & Actualités</h2>
+            <p class="section-subtitle">Retrouvez ici les dernières sessions, TP et partages d'expériences des apprenants.</p>
+            
+            <div class="activities-grid">
+                <!-- Première carte avec l'image -->
+                <div class="activity-card">
+                    <img src="images/cours1.png" alt="Atelier New Life">
+                    <span class="badge">Atelier pratique</span>
+                    <h3>Séance de codage HTML/CSS</h3>
+                    <p class="date">Publié le 16 octobre 2026</p>
+                    <p>Mise en pratique de la structure des pages web avec les étudiants du centre New Life.</p>
+                </div>
+
+                <!-- Deuxième carte d'activité -->
+                <div class="activity-card">
+                    <span class="badge">Bureautique</span>
+                    <h3>Maîtrise avancée d'Excel</h3>
+                    <p class="date">Publié le 15 octobre 2026</p>
+                    <p>Apprentissage des tableaux croisés dynamiques et des formules conditionnelles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Inscription en Ligne -->
+    <section id="inscription" class="activities-section" style="background-color: #f1f3f5;">
+        <div class="container">
+            <h2>Inscription en Ligne</h2>
+            <p class="section-subtitle">Rejoignez le centre New Life et boostez votre carrière numérique dès aujourd'hui.</p>
+            
+            <div style="max-width: 600px; margin: 0 auto; background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #b38f00;">
+                <form action="#" method="POST">
+                    
+                    <div style="margin-bottom: 20px;">
+                        <label for="nom" style="display: block; margin-bottom: 8px; font-weight: 600; color: #2c3e50;">Nom complet</label>
+                        <input type="text" id="nom" name="nom" placeholder="Ex: Jean Dupont" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;">
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label for="email" style="display: block; margin-bottom: 8px; font-weight: 600; color: #2c3e50;">Adresse email</label>
+                        <input type="email" id="email" name="email" placeholder="Ex: exemple@gmail.com" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;">
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label for="telephone" style="display: block; margin-bottom: 8px; font-weight: 600; color: #2c3e50;">Numéro de téléphone</label>
+                        <input type="tel" id="telephone" name="telephone" placeholder="Ex: +243 852 341 188" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;">
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label for="formation" style="display: block; margin-bottom: 8px; font-weight: 600; color: #2c3e50;">Choisissez votre formation</label>
+                        <select id="formation" name="formation" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; background-color: #fff;">
+                            <option value="bureautique">Bureautique & Maintenance</option>
+                            <option value="dev-web">Développement Web</option>
+                            <option value="ia">Intelligence Artificielle</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="cta-button" style="width: 100%; border: none; cursor: pointer; font-size: 16px; text-align: center;">Valider mon inscription</button>
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Bouton de contact WhatsApp direct -->
+<div style="text-align: center; margin: 30px 0;">
+    <a href="https://wa.me/243852341188?text=Bonjour%20New%20Life,%20je%20souhaite%20m'inscrire%20ou%20avoir%20plus%20d'informations." 
+       target="_blank" 
+       class="cta-button" 
+       style="background-color: #25d366; display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+        <span>💬 Discuter avec nous sur WhatsApp</span>
+    </a>
+</div>
+<!-- Section Contact & Localisation -->
+<section id="contact" class="about-section" style="background-color: #ffffff; padding: 60px 0;">
+    <div class="container">
+        <h2>Où nous trouver ?</h2>
+        <p class="section-subtitle">Venez nous rendre visite au centre New Life ou contactez-nous directement.</p>
+        
+        <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; align-items: center; margin-top: 30px;">
+            
+            <!-- Coordonnées textuelles -->
+            <div style="flex: 1; min-width: 280px; text-align: left; background: #f8f9fa; padding: 30px; border-radius: 8px; border-left: 4px solid #b38f00; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+                <h3 style="color: #2c3e50; margin-bottom: 15px;">Nos Coordonnées</h3>
+                <p style="margin-bottom: 12px;"><strong>📍 Adresse :</strong> Kinshasa, RDC</p>
+                <p style="margin-bottom: 12px;"><strong>📞 Téléphone :</strong> +243 852 341 188</p>
+                <p style="margin-bottom: 12px;"><strong>📧 Email :</strong> narcissekisalu@gmail.com</p>
+                <p style="margin-bottom: 0;"><strong>💬 WhatsApp :</strong> +243 82 76 73 269</p>
+            </div>
+
+            <!-- Espace Localisation / Carte -->
+            <div style="flex: 1; min-width: 280px; background: #e9ecef; height: 250px; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #555; font-weight: bold; padding: 20px; text-align: center;">
+                <span style="font-size: 24px; margin-bottom: 10px;">🗺️</span>
+                <span>Centre de Formation New Life</span>
+                <span style="font-size: 14px; color: #777; margin-top: 5px;">Kinshasa, République Démocratique du Congo</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- Pied de page & Contact -->
+    <footer id="contact" class="main-footer">
+        <div class="container">
+            <p>&copy; 2026 New Life - Centre de Formation Numérique. Tous droits réservés.</p>
+            <p>Contact : +243 852 341 188 - 82 76 73 269 | narcissekisalu@gmail.com</p>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
