@@ -106,7 +106,9 @@
             <p class="section-subtitle">Rejoignez le centre New Life et boostez votre carrière numérique dès aujourd'hui.</p>
             
             <div style="max-width: 600px; margin: 0 auto; background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #b38f00;">
-                <form action="#" method="POST">
+                
+                <!-- Formulaire connecté à l'envoi direct par Email -->
+                <form onsubmit="envoyerEmail(event)">
                     
                     <div style="margin-bottom: 20px;">
                         <label for="nom" style="display: block; margin-bottom: 8px; font-weight: 600; color: #2c3e50;">Nom complet</label>
@@ -126,35 +128,29 @@
                     <div style="margin-bottom: 20px;">
                         <label for="formation" style="display: block; margin-bottom: 8px; font-weight: 600; color: #2c3e50;">Choisissez votre formation</label>
                         <select id="formation" name="formation" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; background-color: #fff;">
-                            <option value="bureautique">Bureautique & Maintenance</option>
-                            <option value="dev-web">Développement Web</option>
-                            <option value="ia">Intelligence Artificielle</option>
+                            <option value="Bureautique & Maintenance">Bureautique & Maintenance</option>
+                            <option value="Développement Web">Développement Web</option>
+                            <option value="Intelligence Artificielle">Intelligence Artificielle</option>
                         </select>
                     </div>
 
-                    <button type="submit" class="cta-button" style="width: 100%; border: none; cursor: pointer; font-size: 16px; text-align: center;">Valider mon inscription</button>
+                    <button type="submit" class="cta-button" style="width: 100%; border: none; cursor: pointer; font-size: 16px; text-align: center; background-color: #ea4335;">✉️ Valider mon inscription par Email</button>
 
                 </form>
             </div>
 
-            <!-- Bouton pour s'inscrire via Gmail -->
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="mailto:narcissekisalu@gmail.com?subject=Inscription%20New%20Life&body=Bonjour,%20je%20souhaite%20m'inscrire%20au%20centre%20New%20Life." class="cta-button" style="background-color: #ea4335; display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
-                    <span>✉️ S'inscrire via Gmail</span>
+            <!-- Bouton de contact WhatsApp direct (toujours présent pour ceux qui l'utilisent) -->
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="https://wa.me/243852341188?text=Bonjour%20New%20Life,%20je%20souhaite%20m'inscrire%20ou%20avoir%20plus%20d'informations." 
+                   target="_blank" 
+                   class="cta-button" 
+                   style="background-color: #25d366; display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <span>💬 S'inscrire ou discuter sur WhatsApp</span>
                 </a>
             </div>
+
         </div>
     </section>
-
-    <!-- Bouton de contact WhatsApp direct -->
-    <div style="text-align: center; margin: 30px 0;">
-        <a href="https://wa.me/243852341188?text=Bonjour%20New%20Life,%20je%20souhaite%20m'inscrire%20ou%20avoir%20plus%20d'informations." 
-           target="_blank" 
-           class="cta-button" 
-           style="background-color: #25d366; display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
-            <span>💬 Discuter avec nous sur WhatsApp</span>
-        </a>
-    </div>
 
     <!-- Section Contact & Localisation -->
     <section id="contact" class="about-section" style="background-color: #ffffff; padding: 60px 0;">
@@ -185,14 +181,27 @@
     </section>
 
     <!-- Pied de page & Contact -->
-    <footer id="contact" class="main-footer">
+    <footer class="main-footer">
         <div class="container">
             <p>&copy; 2026 New Life - Centre de Formation Numérique. Tous droits réservés.</p>
             <p>Contact : +243 852 341 188 - 82 76 73 269 | narcissekisalu@gmail.com</p>
         </div>
     </footer>
 
-    <!-- Script JavaScript -->
-    <script src="script.js"></script>
+    <!-- Script JavaScript pour formater l'email automatiquement avec les infos du formulaire -->
+    <script>
+    function envoyerEmail(event) {
+        event.preventDefault();
+        let nom = document.getElementById('nom').value;
+        let email = document.getElementById('email').value;
+        let tel = document.getElementById('telephone').value;
+        let formation = document.getElementById('formation').value;
+
+        let sujet = encodeURIComponent("Nouvelle inscription - New Life");
+        let corps = encodeURIComponent(`Bonjour New Life,\n\nJe souhaite m'inscrire au centre.\n\nVoici mes coordonnées :\n- Nom : ${nom}\n- Email : ${email}\n- Téléphone : ${tel}\n- Formation choisie : ${formation}`);
+        
+        window.location.href = `mailto:narcissekisalu@gmail.com?subject=${sujet}&body=${corps}`;
+    }
+    </script>
 </body>
 </html>
