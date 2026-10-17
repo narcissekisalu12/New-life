@@ -151,6 +151,8 @@
                             <option value="Développement Web">Développement Web</option>
                             <option value="Intelligence Artificielle">Intelligence Artificielle</option>
                             <option value="Achat Licence EduGest (Pro)">🚀 Achat de Licence : Logiciel EduGest</option>
+                            <option value="Coaching & Accompagnement Pro">🎯 Coaching & Accompagnement Pro</option>
+                            <option value="Service Dépannage & Maintenance">🔧 Service Dépannage & Maintenance</option>
                         </select>
                     </div>
 
@@ -217,8 +219,8 @@
         let tel = document.getElementById('telephone').value;
         let formation = document.getElementById('formation').value;
 
-        let sujet = encodeURIComponent("Nouvelle inscription / Commande - New Life");
-        let corps = encodeURIComponent(`Bonjour New Life,\n\nJe souhaite m'inscrire ou commander.\n\nVoici mes coordonnées :\n- Nom : ${nom}\n- Email : ${email}\n- Téléphone : ${tel}\n- Option choisie : ${formation}`);
+        let sujet = encodeURIComponent("Nouvelle inscription / Option - New Life");
+        let corps = encodeURIComponent(`Bonjour New Life,\n\nJe souhaite souscrire à une option ou m'inscrire.\n\nVoici mes coordonnées :\n- Nom : ${nom}\n- Email : ${email}\n- Téléphone : ${tel}\n- Option choisie : ${formation}`);
         
         window.location.href = `mailto:narcissekisalu@gmail.com?subject=${sujet}&body=${corps}`;
     }
